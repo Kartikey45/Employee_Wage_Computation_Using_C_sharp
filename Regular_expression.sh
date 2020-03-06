@@ -45,8 +45,17 @@ function mobileNumber()
 	conditionCheck
 }
 
+#FUNCTION OF VALID PASSWORD
+function password()
+{
+	read -p "Enter Pasword :" value
+	regexPattern="^[a-zA-Z0-9]{8,}$"
+	conditionCheck
+}
+
 #FUNCTIONS CALL
 firstName
 lastName
 email
 mobileNumber
+password
