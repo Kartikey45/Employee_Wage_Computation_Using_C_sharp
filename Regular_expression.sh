@@ -21,5 +21,14 @@ function firstName()
 	conditionCheck
 }
 
+#FUNCTION OF LAST NAME
+function lastName()
+{
+	read -p "Enter Last name :" value
+	regexPattern="^[A-Z]{1}[a-zA-Z]{2,}$"
+	conditionCheck
+}
+
 #FUNCTIONS CALL
 firstName
+lastName
