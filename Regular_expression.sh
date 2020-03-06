@@ -45,11 +45,11 @@ function mobileNumber()
 	conditionCheck
 }
 
-#FUNCTION OF VALID PASSWORD
+#FUNCTION OF VALID PASSWORD HAVING ATLEAST ONE UPPERCASE
 function password()
 {
 	read -p "Enter Pasword :" value
-	regexPattern="^[a-zA-Z0-9]{8,}$"
+	regexPattern="^(?=.*([A-Z]+[a-z0-9]*)|([a-z0-9]*[A-Z]+[a-z0-9]*)|([a-z0-9]*[A-Z]+)).{8,}$"
 	conditionCheck
 }
 
