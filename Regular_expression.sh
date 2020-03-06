@@ -29,6 +29,15 @@ function lastName()
 	conditionCheck
 }
 
+#FUNCTION OF E-MAIL
+function email()
+{
+	read -p "Enter Email id :" value
+	regexPattern="^[a-zA-Z0-9+-]{1,}([.][a-z0-9+-]{1,})?[@]([a-zA-Z0-9]{1,}[.][a-z]{2,3})([.][a-z]{2,3})?$"
+	conditionCheck
+}
+
 #FUNCTIONS CALL
 firstName
 lastName
+email
