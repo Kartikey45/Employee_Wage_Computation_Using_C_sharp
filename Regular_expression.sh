@@ -37,7 +37,16 @@ function email()
 	conditionCheck
 }
 
+#FUNCTION OF VALID MOBILE NUMBER
+function mobileNumber()
+{
+	read -p "Enter Mobile number :" value
+	regexPattern="^[0-9]{2}[ ][0-9]{10}$"
+	conditionCheck
+}
+
 #FUNCTIONS CALL
 firstName
 lastName
 email
+mobileNumber
