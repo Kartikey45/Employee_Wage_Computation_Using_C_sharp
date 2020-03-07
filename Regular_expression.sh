@@ -49,7 +49,7 @@ function mobileNumber()
 function password()
 {
 	read -p "Enter Pasword :" value
-	regexPattern="^(?=.*([a-zA-Z]*[0-9]+[a-zA-Z]*[A-Z]+)|([A-Z]+[a-zA-Z]*[0-9][a-zA-Z]*)).{8,}$"
+	regexPattern="^(?=.*([a-zA-Z]*[0-9]+[a-zA-Z]*[A-Z]+)|([A-Z]+[a-zA-Z]*[0-9]+[a-zA-Z]*)).{8,}$"
 	conditionCheck
 }
 
