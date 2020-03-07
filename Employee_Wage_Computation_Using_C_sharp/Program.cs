@@ -6,7 +6,7 @@ namespace Employee_Wage_Computation_Using_C_sharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Employee Wage Computation !!!!!");
+            Console.WriteLine("Welcome to Employee Wage Computation");
             Console.ReadKey();
         }
     }
