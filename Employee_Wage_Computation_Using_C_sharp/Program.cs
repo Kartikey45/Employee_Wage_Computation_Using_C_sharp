@@ -44,6 +44,7 @@ namespace Employee_Wage_Computation_Using_C_sharp
 
             //ARRAY INITIALIZE
             int[] employeeDailyWage = new int[100];
+            int[] daysArray = new int[100];
 
             Console.WriteLine("Welcome to Employee Wage Computation");
 
@@ -51,7 +52,7 @@ namespace Employee_Wage_Computation_Using_C_sharp
             Program obj = new Program();
 
             //CALCULATE TOTAL HOURS WORKED BY AN EMPLOYEE IN A MONTH OF TWENTY DAYS
-            while (days < daysPerMonth && workingHours < workingHoursLimit)
+            while ((days < daysPerMonth) && (workingHours < workingHoursLimit))
             {
                 days++;
 
@@ -63,6 +64,8 @@ namespace Employee_Wage_Computation_Using_C_sharp
 
                 //CREATE ARRAY TO STORE DAILY WAGE ALONG WITH TOTAL WAGE 
                 employeeDailyWage[days] = perDayHours * WAGE_PER_HOUR;
+                daysArray[days] = days;
+
             }
 
             //CALCULATE EMPLOYEE WAGE FOR A MONTH
@@ -74,7 +77,12 @@ namespace Employee_Wage_Computation_Using_C_sharp
             Console.WriteLine(salary + " rs. per month");
 
             //DISPLAY DAILY WAGES
+            Console.WriteLine("Daily wages :");
             Array.ForEach(employeeDailyWage, Console.WriteLine);
+
+            //DISPLAY DAYS
+            Console.WriteLine("Days :");
+            Array.ForEach(daysArray, Console.WriteLine);
             Console.ReadKey();
         }
     }
