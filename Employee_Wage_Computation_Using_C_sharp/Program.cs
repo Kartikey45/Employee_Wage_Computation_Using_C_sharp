@@ -21,20 +21,20 @@ namespace Employee_Wage_Computation_Using_C_sharp
             Console.WriteLine("Welcome to Employee Wage Computation");
 
             //CONDITION CHECK OF EMPLOYEE IS FULL-TIME , PART-TIME OR ABSENT
-            if (rand == IS_PART_TIME)
+            switch (rand)
             {
-                Console.WriteLine("Employee is Part time .");
-                hoursPerDay = 4;
-            }
-            else if (rand == IS_FULL_TIME)
-            {
-                Console.WriteLine("Employee is full time .");
-                hoursPerDay = 8;
-            }
-            else
-            {
-                Console.WriteLine("Employee is Absent .");
-                hoursPerDay = 0;
+                case 1:
+                    Console.WriteLine("Employee is a Part time .");
+                    hoursPerDay = 4;
+                    break;
+                case 2:
+                    Console.WriteLine("Employee is a Full time .");
+                    hoursPerDay = 8;
+                    break;
+                default:
+                    Console.WriteLine("Employee is Absent .");
+                    hoursPerDay = 0;
+                    break;
             }
 
             //CALCULATE DAILY EMPLOYEE WAGE
@@ -44,4 +44,3 @@ namespace Employee_Wage_Computation_Using_C_sharp
             Console.Read();
         }
     }
-}
