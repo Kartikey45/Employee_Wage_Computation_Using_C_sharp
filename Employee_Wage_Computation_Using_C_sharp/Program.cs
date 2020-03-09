@@ -11,8 +11,6 @@ namespace Employee_Wage_Computation_Using_C_sharp
             Random random = new Random();
 
             // INITIALIZE CONSTANTS AND VARIABLES
-            int IS_PART_TIME = 1;
-            int IS_FULL_TIME = 2;
             int WAGE_PER_HOUR = 20;
             int hoursPerDay;
             int dailyEmployeeWage;
@@ -44,3 +42,4 @@ namespace Employee_Wage_Computation_Using_C_sharp
             Console.Read();
         }
     }
+}
