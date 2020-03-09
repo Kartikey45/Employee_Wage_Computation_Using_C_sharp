@@ -45,7 +45,7 @@ function mobileNumber()
 	conditionCheck
 }
 
-#FUNCTION OF VALID PASSWORD HAVING ATLEAST ONE SPECIAL CHARACTER
+#FUNCTION OF VALID PASSWORD HAVING EXACTLY ONE SPECIAL CHARACTER
 function password()
 {
 	read -p "Enter Pasword :" value
