@@ -14,31 +14,41 @@ namespace Employee_Wage_Computation_Using_C_sharp
             int WAGE_PER_HOUR = 20;
             int hoursPerDay;
             int dailyEmployeeWage;
-            int rand = random.Next(0, 3);
+            int salary = 0;
+            int daysPerMonth = 20;
 
             Console.WriteLine("Welcome to Employee Wage Computation");
 
-            //CONDITION CHECK OF EMPLOYEE IS FULL-TIME , PART-TIME OR ABSENT
-            switch (rand)
+            //CALCULATE WAGES FOR A MONTH
+            for (int day = 0; day < daysPerMonth; day++)
             {
-                case 1:
-                    Console.WriteLine("Employee is a Part time .");
-                    hoursPerDay = 4;
-                    break;
-                case 2:
-                    Console.WriteLine("Employee is a Full time .");
-                    hoursPerDay = 8;
-                    break;
-                default:
-                    Console.WriteLine("Employee is Absent .");
-                    hoursPerDay = 0;
-                    break;
+                //CONDITION CHECK OF EMPLOYEE IS FULL-TIME , PART-TIME OR ABSENT
+                switch (random.Next(0, 3))
+                {
+                    case 1:
+                        //Console.WriteLine("Employee is a Part time .");
+                        hoursPerDay = 4;
+                        break;
+                    case 2:
+                        //Console.WriteLine("Employee is a Full time .");
+                        hoursPerDay = 8;
+                        break;
+                    default:
+                        //Console.WriteLine("Employee is Absent .");
+                        hoursPerDay = 0;
+                        break;
+                }
+
+                //CALCULATE DAILY EMPLOYEE WAGE
+                dailyEmployeeWage = WAGE_PER_HOUR * hoursPerDay;
+
+                //CALCULATE THE SUM OF DAILY EMPLOYEE WAGES 
+                salary = salary + dailyEmployeeWage;
             }
 
-            //CALCULATE DAILY EMPLOYEE WAGE
-            Console.WriteLine("Daily Employee Wage :");
-            dailyEmployeeWage = WAGE_PER_HOUR * hoursPerDay;
-            Console.WriteLine(dailyEmployeeWage + " rs. per day");
+            //DISPLAY EMPLOYEE WAGE FOR A MONTH
+            Console.WriteLine("Employee wage for a month :");
+            Console.WriteLine(salary + " rs. per month");
             Console.Read();
         }
     }
