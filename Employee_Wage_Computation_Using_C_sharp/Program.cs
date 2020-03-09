@@ -7,23 +7,28 @@ namespace Employee_Wage_Computation_Using_C_sharp
         // MAIN METHOD
         public static void Main(string[] args)
         {
-            // CREATE OBJECTS
+            //CREATE OBJECTS
             Random random = new Random();
 
             // INITIALIZE CONSTANTS AND VARIABLES
-            int IS_PRESENT = 1;
+            int IS_PART_TIME = 1;
+            int IS_FULL_TIME = 2;
             int WAGE_PER_HOUR = 20;
             int hoursPerDay;
-            int num = random.Next(0, 2);
             int dailyEmployeeWage;
+            int rand = random.Next(0, 3);
 
             Console.WriteLine("Welcome to Employee Wage Computation");
-            Console.Write("Attendance of Employee :\t");
 
-            //CONDITION CHECK OF EMPLOYEE IS PRESENT OR NOT
-            if (num == IS_PRESENT)
+            //CONDITION CHECK OF EMPLOYEE IS FULL-TIME , PART-TIME OR ABSENT
+            if (rand == IS_PART_TIME)
             {
-                Console.WriteLine("Employee is Present .");
+                Console.WriteLine("Employee is Part time .");
+                hoursPerDay = 4;
+            }
+            else if (rand == IS_FULL_TIME)
+            {
+                Console.WriteLine("Employee is full time .");
                 hoursPerDay = 8;
             }
             else
