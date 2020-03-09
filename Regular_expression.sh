@@ -45,11 +45,11 @@ function mobileNumber()
 	conditionCheck
 }
 
-#FUNCTION OF VALID PASSWORD HAVING ATLEAST ONE NUMERIC CHARACTER
+#FUNCTION OF VALID PASSWORD HAVING ATLEAST ONE SPECIAL CHARACTER
 function password()
 {
 	read -p "Enter Pasword :" value
-	regexPattern="^(?=.*([a-zA-Z]*[0-9]+[a-zA-Z]*[A-Z]+)|([A-Z]+[a-zA-Z]*[0-9]+[a-zA-Z]*)).{8,}$"
+	regexPattern="^(?=.{8})(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]*[^A-Za-z0-9][A-Za-z0-9]*$"
 	conditionCheck
 }
 
